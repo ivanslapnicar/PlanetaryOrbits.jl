@@ -20,7 +20,7 @@ or download the repository directly as zip file.
 ```
 > using Pkg
 > Pkg.add("Pluto")
-> Pkg.add("Pluto")
+> Pkg.add("Plots")
 ```
 The above commands need to be executed only once.
 * Start the Pluto notebook server: in Julia terminal run
