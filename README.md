@@ -32,6 +32,8 @@ The above commands need to be executed only once.
 
 ## Example Images
 
+Images show secants between positions of two planets from January 1, 2001 until January 1, 2021 in the intervals of ten days.
+
 ![Mercury-Venus](Mercury-Venus.png)
 
 ![Earth-Mars](Earth-Mars.png)
