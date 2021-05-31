@@ -1,11 +1,22 @@
 ### A Pluto.jl notebook ###
-# v0.12.20
+# v0.14.7
 
 using Markdown
 using InteractiveUtils
 
+# ╔═╡ 98cfdfff-6884-4967-a356-19e9e94d5be1
+# Disable this cell if running on your machine ...
+begin
+	import Pkg
+    Pkg.activate(mktempdir())
+    Pkg.add([
+        Pkg.PackageSpec(name="Plots"),
+		Pkg.PackageSpec(name="AstroLib")
+    ])
+end
+
 # ╔═╡ b9eba282-67d3-11eb-3734-033538ed6c62
-using AstroLib, Dates, Plots 
+using AstroLib, Dates, Plots
 
 # ╔═╡ cf3f5210-67e4-11eb-2b2b-bb38ff2d21b3
 md"
@@ -62,6 +73,7 @@ xy2=[(i[1]*cos(i[2])*cos(i[3]),i[1]*sin(i[2])*cos(i[3])) for i in coord2]
 
 # ╔═╡ 284659d0-67db-11eb-1c13-75528f34153b
 begin
+	plotly()
 	label1=Planets[Planet1]
 	label2=Planets[Planet2]
 	scatter(xy1,label=label1,aspect_ratio=1)
@@ -70,6 +82,7 @@ end
 
 # ╔═╡ 067f952e-67dd-11eb-0be6-73f7cd45d333
 begin
+	plotly()
 	title=Planets[Planet1]*"-"*Planets[Planet2]
 	plot(color=:white, background=:lightgreen, showaxis=:hide, axis=nothing, 		grid=false, leg=false, aspect_ratio=1,size=(400,400),title=title,fg=:white)
 	for i=2:length(xy2)
@@ -80,10 +93,11 @@ begin
 end
 
 # ╔═╡ 993655e0-69ee-11eb-2201-6bc1eca2f420
-savefig(title*".png")
+# savefig(title*".svg")
 
 # ╔═╡ Cell order:
 # ╟─cf3f5210-67e4-11eb-2b2b-bb38ff2d21b3
+# ╠═98cfdfff-6884-4967-a356-19e9e94d5be1
 # ╠═b9eba282-67d3-11eb-3734-033538ed6c62
 # ╠═7cfe5360-69ed-11eb-3fea-8daf1f2706ec
 # ╠═06a3a6b0-67d7-11eb-0c38-5599b546084b
