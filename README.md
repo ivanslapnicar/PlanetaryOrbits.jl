@@ -41,6 +41,6 @@ Images show secants between positions of two planets from January 1, 2001 until 
 
 ![Mercury-Venus](Mercury-Venus.png)
 
-![Earth-Mars](Earth-Mars.svg)
+![Earth-Mars](Earth-Mars.png)
 
 ![Earth-Jupyter](Earth-Jupyter.png)
